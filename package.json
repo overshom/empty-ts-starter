@@ -14,7 +14,7 @@
   ],
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --watch src --exec 'NODE_ENV=development ts-node' src -e ts",
+    "dev": "nodemon --watch src --exec 'NODE_ENV=development ts-node -r tsconfig-paths/register' src -e ts",
     "start:prod": "NODE_ENV=production node .",
     "prebuild:dev": "rimraf dist",
     "build:dev": "tsc --p tsconfig.json",
@@ -35,6 +35,7 @@
     "@types/node": "16.4.10",
     "rimraf": "3.0.0",
     "ts-node": "10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "5.3.3"
   }
 }
