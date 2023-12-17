@@ -7,7 +7,7 @@ const port = TypedEnv.PORT;
 app.use(cors());
 
 const started = new Date();
-const instanceId = `id-${Math.floor(Math.random() * 1e13)}`;
+const instanceId = `id-${Math.random().toString(16).slice(2)}`;
 
 app.get('/', (req, res) => {
   const elapsed = Date.now() - started.getTime();
