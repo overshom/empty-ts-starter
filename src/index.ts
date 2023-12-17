@@ -1,7 +1,8 @@
 import express from 'express';
 import cors from 'cors';
+import { TypedEnv } from './environment/typed-env';
 const app = express();
-const port = 18325;
+const port = TypedEnv.PORT;
 
 app.use(cors());
 
