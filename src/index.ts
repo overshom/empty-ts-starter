@@ -5,6 +5,7 @@ const app = express();
 const PORT = TypedEnv.PORT;
 
 app.use(cors());
+app.enable('trust proxy');
 
 const started = new Date();
 const instanceID = `id-${Math.random().toString(16).slice(2)}`;
