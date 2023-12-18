@@ -8,8 +8,6 @@ ADD yarn.lock /app/
 
 RUN yarn
 
-ADD package.json /app/
-
 ADD . /app
 
 RUN yarn build:prod
