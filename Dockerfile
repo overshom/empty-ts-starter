@@ -4,9 +4,11 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /app
 
-ADD package.json yarn.lock /app/
+ADD yarn.lock /app/
 
 RUN yarn
+
+ADD package.json /app/
 
 ADD . /app
 
