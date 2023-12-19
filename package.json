@@ -15,7 +15,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon --watch src --exec 'NODE_ENV=development ts-node -r tsconfig-paths/register' src -e ts",
-    "start:prod": "NODE_ENV=production node -r ts-node/register/transpile-only -r tsconfig-paths/register .",
+    "start:prod": "NODE_ENV=production node -r ./tsconfig-paths-bootstrap.js .",
     "prebuild:dev": "rimraf dist",
     "build:dev": "tsc --p tsconfig.json",
     "prebuild:prod": "rimraf dist",
