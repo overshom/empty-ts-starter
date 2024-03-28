@@ -11,9 +11,9 @@
     "lib": ["es2021"],
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
+    "baseUrl": "src",
     "paths": {
-      "src/*": ["./src/*"]
+      "src/*": ["./*"]
     },
     "incremental": true,
     "strict": true,
